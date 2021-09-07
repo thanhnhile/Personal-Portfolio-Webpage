@@ -1,0 +1,232 @@
+#main{
+  
+}
+#navbar{
+    width: 100%;
+    height: 85px;
+    background-color: #be3144;
+    padding:0 16px;
+    position: fixed;
+    z-index: 1;
+}
+#navbar ul{
+    list-style-type: none;
+    padding-left: 0;
+    float: right;
+}
+#navbar ul li{
+    display: inline-block;
+    padding:24px;
+}
+#navbar ul li:hover{
+    background-color: #45567d;
+}
+#navbar ul li a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.4;
+}
+#content{
+   padding-top:85px;
+
+}
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome-section h2{
+    color: #fff;
+    font-size: 5.5rem;
+    font-weight: 600;
+    position: relative;
+    animation: playtext ease-out 1s;
+}
+@keyframes playtext{
+    0%{
+        top:-8px;
+        transform:skewX(90deg);
+    }
+    50%{
+        top:10px;
+    }
+    100%{
+        top:-7px;
+    }
+}
+#welcome-section p{
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: #d13709;
+    font-style: italic;
+}
+#projects{
+    width: 100%;
+    background-color: #45567d;
+    padding:120px 38px;
+}
+#projects h2{
+    width: fit-content;
+    margin: 0 auto 75px;
+    text-align: center;
+    color: #fff;
+    font-size: 3.8rem;
+    font-weight: 700;
+    padding:0 48px 4px;
+    border-bottom: 1px solid #fff;
+    line-height: 1.4;
+}
+#project-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap:48px;
+    grid-column-gap:48px;
+    margin:32px 0;
+}
+.project-item{
+    display: block;
+    text-decoration: none;
+
+}
+.project-item__img{
+    width: 100%;
+    padding-top:103%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+}
+.project-item__title{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    height: 84px;
+    background: #303841;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.project-item__title:hover > .code{
+   color: #d13709;
+}
+.project-item__title .code{
+    content: "&lt";
+    font-style: 1.8rem;
+    color:transparent;
+    margin: 0 8px;
+    transition: color ease-in-out 0.3s;
+}
+#projects .btn{
+    display: block;
+    font-size: 2rem;
+    color:#fff;
+    font-weight: 500;
+    margin: auto;
+    background-color: #303841;
+    text-align: center;
+    border:0;
+    border-radius: 2px;
+    padding:1.1rem 2rem;
+    cursor: pointer;
+}
+#projects .btn:hover{
+    background-color: #be3144;
+}
+#projects i{
+    font-size: 1.8rem;
+    color:#fff;
+    margin-left: 0.5rem;
+    position: relative;
+    right: 0;
+    transition: right ease 0.3s;
+}
+#projects .btn:hover{
+    background-color: #be3144;
+}
+#projects .btn:hover  i{
+    right: -2px;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#contact{
+    width: 100%;
+    background-color: #303841;
+    text-align: center;
+    color: #fff;
+}
+#contact h2{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+#contact p{
+    font-weight: 300;
+    font-size: 2rem;
+}
+#contact-list{
+    padding:6rem 0;
+    border-bottom: 4px solid #be3144;
+}
+#contact-list ul{
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 5rem;
+}
+#contact-list ul li{
+    display: inline-block;
+    margin-right: 2.8rem;
+    line-height: 2.5;
+}
+.contact-link{
+    display: block;
+    text-decoration: none;
+    font-size:2.5rem;
+    font-weight: 500;
+    color: #fff;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}
+.contact-link i{
+    font-size: 2.4rem;
+    margin-right: 0.4rem;
+}
+.contact-link:hover{
+    transform: translateY(8px);
+}
+#copyright{
+    width: 100%;
+    color:#fff;
+    padding:40px 30px;
+    font-size: 2.1rem;
+    display: grid;
+    grid-template-areas: "text-description text-description copyright";
+    grid-column-gap:40px;
+}
+#copyright p{
+    font-weight: 400;
+    text-align: left;
+    grid-area: text-description;
+}
+#copyright h3{
+    font-size: 1.9rem;
+    font-weight: 400;
+    text-align: left;
+    grid-area: copyright;
+
+}
